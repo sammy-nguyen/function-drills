@@ -5,6 +5,10 @@
 */
 
 //CODE HERE
+function helloWorld() {
+  console.log('Hello,World!')
+}
+helloWorld()
 
 
 ////////////////// PROBLEM 2 ////////////////////
@@ -15,6 +19,10 @@
 */
 
 //CODE HERE
+function printName(name) {
+  console.log(name)
+}
+printName('Bryan')
 
 
 ////////////////// PROBLEM 3 ////////////////////
@@ -29,17 +37,26 @@
 */
 
 //CODE HERE
-
+function greeting(name) {
+  console.log('Hello, ' + name)
+}
+greeting('Von')
 
 ////////////////// PROBLEM 4 ////////////////////
 /*
-  Create a function called add that takes in two parameters 
+  Create a function called add that takes in two parameters
   Inside, convert the arguments to be numbers (just in case strings get sent in)
   The add function should RETURN the two parameters added together.
   Create a variable outside the function called 'sum' and set it equal to add invoked (called), passing in 2 arguments.
 */
 
 //CODE HERE
+function add(a, b) {
+  return a + b
+}
+
+let sum = add(8, 7)
+
 
 
 ////////////////// PROBLEM 5 ////////////////////
@@ -52,7 +69,18 @@
 */
 
 //CODE HERE
+function nameCheck(namePerson) {
+  if (namePerson === 'Steven') {
+    return 'What is up Steven?'
+  } else if (namePerson === 'Bryan') {
+    return 'Hey, Bryan!'
+  } else {
+    return 'Cool name,' + namePerson
+  }
+}
+let nameGreeting = nameCheck('Bryan')
 
+console.log(nameGreeting)
 
 ////////////////// PROBLEM 6 ////////////////////
 /*
@@ -65,6 +93,18 @@
 */
 
 //CODE HERE
+function faveColorFinder(color) {
+  if (color === 'red') {
+    return 'red is a great color'
+  } else if (color === 'green') {
+    return 'green is a solid favorite color'
+  } else if (color === 'black') {
+    return 'so trendy'
+  } else {
+    return 'you need to evaluate your favorite color choice'
+  }
+}
+let colorRating = faveColorFinder('red')
 
 
 ////////////////// PROBLEM 7 ////////////////////
@@ -76,6 +116,14 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
+function printAllNames(helloWorld) {
+  for (let i = 0; i < helloWorld.length; i++) {
+    console.log(helloWorld[i])
+  }
+}
+printAllNames(namesArr)
+
+
 
 
 ////////////////// PROBLEM 8 ////////////////////
@@ -88,19 +136,44 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 
 //CODE HERE
 
+function thatsOdd(theNum) {
+  if ((theNum) % 2 === 0) {
+    return 'That is not odd!'
+  } else {
+    return 'That is odd indeed!'
+  }
+}
+
 
 ////////////////// PROBLEM 9 ////////////////////
 let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
-/* 
-  Create a function called 'bigOrSmall' that takes in one parameter, 'arr',  which will be an array of numbers. 
-  Inside of the bigOrSmall function, create a new array called 'answers'. 
-  Then, loop over the passed in arr parameter, and check to see if the number in the array is GREATER than 100. 
-  If it is, push 'big' as a string to the answers array. 
-  If the number is LESS than or EQUAL to 100, push 'small' as a string to the answers array. 
+/*
+  Create a function called 'bigOrSmall' that takes in one parameter, 'arr',  which will be an array of numbers.
+  Inside of the bigOrSmall function, create a new array called 'answers'.
+  Then, loop over the passed in arr parameter, and check to see if the number in the array is GREATER than 100.
+  If it is, push 'big' as a string to the answers array.
+  If the number is LESS than or EQUAL to 100, push 'small' as a string to the answers array.
   Return the answers array inside of the function to a variable called `arrayEvaluator`.
 */
 
 //CODE HERE
+function bigOrSmall(arr) {
+  let answers = []
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 100) {
+      answers.push("big")
+    } else if (arr[i] <= 100) {
+      answers.push("small")
+    }
+  }
+  return answers
+}
+
+let arrayEvaluator = bigOrSmall(bigOrSmallArray)
+
+
+
+
 
 
 ////////////////// PROBLEM 10 ////////////////////
@@ -112,6 +185,16 @@ let loser = 'Glimmer'
 */
 
 //CODE HERE
+function theEliminator(contestantsArr, loser) {
+  for (let i = 0; i < contestantsArr.length; i++) {
+    if (contestantsArr[i] === loser) {
+      contestantsArr.splice(i, 1)
+    }
+
+  }
+  return contestantsArr
+}
+
 
 
 ////////////////// PROBLEM 11 ////////////////////
@@ -122,18 +205,34 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
-
+function toThat(string) {
+  console.log(string.toUpperCase())
+}
+toThat(sampleString)
 
 ////////////////// PROBLEM 12 ////////////////////
 /*
   Write a function called emailCheck that takes in
   one parameter - email.
-  Inside the function, convert the email param into 
+  Inside the function, convert the email param into
   a string and trim off any excess whitespace.
   Check to make sure the email contains an '@' symbol.
-  If it does, return 'email verified' and if doesn't, 
+  If it does, return 'email verified' and if doesn't,
   return 'must provide a valid email address'
 */
+function emailCheck(email) {
+  let emailM = String(email)
+  emailM.trim()
+
+  if (emailM.includes('@')) {
+    return 'email verified'
+  } else {
+    return 'must provide a valid email address'
+  }
+}
+
+emailCheck('hello@gmail.com')
+
 
 ////////////////// PROBLEM 13 ////////////////////
 /*
@@ -142,7 +241,13 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
+function loveChoco(amountOfGold) {
+  return amountOfGold / 3
 
+}
+let totalFrogs = loveChoco(4)
+
+console.log(loveChoco(4))
 
 ////////////////// PROBLEM 14 ////////////////////
 /*
@@ -183,13 +288,13 @@ function pond() {
 */
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = []
+let globalScope = ["duck"]
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = []
+let bathroomScope = ["rubberDuck", "sailorDuck"]
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = []
+let bathtubScope = ["sailorDuck"]
 
 //This array should contain the variable names (as strings) accessible in the pond function.
-let pondScope = []
+let pondScope = ["realDuck"]
